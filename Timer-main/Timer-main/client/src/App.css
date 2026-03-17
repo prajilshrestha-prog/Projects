@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+}
+
+body {
+  background-color: #020508;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('./assets/image.png');
+  padding: 2rem;
+  
+}
+
+#timers {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 40rem;
+  margin: 2rem auto;
+}
+
+.timer-card {
+    background: linear-gradient(135deg, #020508, #1e3a8a, #4f46e5);
+
+  border-radius: 1.2rem;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.timer-card:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.6rem 1.4rem rgba(0, 0, 0, 0.12);
+}
+
+.timer-card h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.timer-card p {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.timer-card h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  margin-right: 2rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #4338ca;
+  transform: translateY(-0.1rem);
+}
+
+button:active {
+  transform: translateY(0.1rem);
+}
+
+button.cancel {
+  background-color: #ef4444;
+}
+
+button.cancel:hover {
+  background-color: #dc2626;
+}
+
+.timer-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.timer-form {
+  background: #4e96c7;
+  border-radius: 1.2rem;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 35rem;
+  margin: 0 auto;
+}
+
+.field label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: block;
+  color: #020508;
+  margin-bottom: 0.4rem;
+}
+
+.field input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 0.6rem;
+  border: 0.1rem solid #e5e7eb;
+  font-size: 1rem;
+  outline: none;
+}
+
+.field input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0.3rem rgba(79, 70, 229, 0.3);
+}
+
+.toggle-button {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.toggle-button button {
+  background-color: #f59e0b;
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0;
+  line-height: 3.5rem;
+}
+
+.toggle-button button:hover {
+  background-color: #d97706;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 10;
+}
+
+.overlay .timer-form {
+  background: #fff;
+  padding: 2rem;
+  max-width: 35rem;
+}
+
+@media (max-width: 600px) {
+  #timers {
+    width: 90%;
+  }
+
+  .timer-card h2 {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
