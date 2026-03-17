@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.input button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.list .task {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.task h1 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.task button {
+  margin-right: 10px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
